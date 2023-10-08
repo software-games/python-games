@@ -145,18 +145,18 @@ def run_maze(
     solutions: list[list[int]],
 ) -> bool:
     """
-    This method is recursive starting from (i, j) and going in one of four directions:
+    Starting from (i, j) and go recursively in one of four directions:
     up, down, left, right.
     If a path is found to destination it returns True otherwise it returns False.
     Parameters
-        maze: A two dimensional matrix of zeros and ones.
+        maze: A two-dimensional matrix of zeros and ones.
         i, j : coordinates of matrix
-        solutions: A two dimensional matrix of solutions.
+        solutions: A two-dimensional matrix of solutions.
     Returns:
-        Boolean if path is found True, Otherwise False.
+        A path is has been found or not.
     """
     size = len(maze)
-    # Final check point.
+    # Final checkpoint.
     if i == destination_row and j == destination_column and maze[i][j] == 0:
         solutions[i][j] = 0
         return True
