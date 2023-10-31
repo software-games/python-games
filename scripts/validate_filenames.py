@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 import os
+import sys
 
 try:
     from .build_directory_md import good_file_paths
@@ -30,7 +31,4 @@ if nodir_files:
     print("\n".join(nodir_files) + "\n")
 
 bad_files = len(upper_files + space_files + hyphen_files + nodir_files)
-if bad_files:
-    import sys
-
 sys.exit(bad_files)
