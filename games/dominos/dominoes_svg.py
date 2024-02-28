@@ -71,7 +71,7 @@ def dominoes_svg(width_in_px=200) -> None:
             size = (f"{width_in_px+x}px", f"{width_in_px*2+y}px")
             svg = svgwrite.Drawing(filename=filename, size=size)
             svg_domino(svg, (i, j), width_in_px)
-            svg.save()
+            svg.save(pretty=True)
 
 
 if __name__ == "__main__":
