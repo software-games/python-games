@@ -62,6 +62,7 @@ def svg_domino(svg: Drawing, domino: tuple[int, int], width_in_px: int = 200) ->
     svg.add(svg.rect(insert=(2, 2), size=size, fill="white", stroke="blue"))
     x1 = 2 + pip_offsets[0] * width_in_px - 5  # Left of the left-most pip
     x2 = 2 + pip_offsets[2] * width_in_px + 5  # Right of the right-most pip
+    print(x1, width_in_px, x2, width_in_px)
     svg.add(svg.line(x1=x1, y1=width_in_px, x2=x2, y2=width_in_px, stroke="blue"))
     for die, pip_count in enumerate(domino):
         svg_die(svg, die, pip_count, width_in_px)
