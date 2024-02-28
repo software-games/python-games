@@ -13,6 +13,7 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - run: pip install --user svgwrite
-    - run: cd games/dominos
-    - run: mkdir -p dominoes_svg 
-    - run: python3 dominoes_svg.py
+    - run: |
+        cd games/dominos
+        mkdir -p dominoes_svg 
+        python3 dominoes_svg.py
