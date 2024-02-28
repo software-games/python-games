@@ -17,6 +17,8 @@ jobs:
         cd games/dominos
         mkdir -p dominoes_svg 
         python3 dominoes_svg.py
+        git diff
+        git add dominoes_svg/domino_*.svg
     - uses: peter-evans/create-pull-request@v6
       with:
         commit-message: Recreate the Dominos Scalable Vector Graphics (SVG) files
