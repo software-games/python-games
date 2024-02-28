@@ -16,8 +16,10 @@ jobs:
     - run: |
         git checkout -b "dominoes_svg$(date +'%Y_%m_%d_%H_%M')"
         cd games/dominos
-        mkdir -p dominoes_svg 
+        mkdir -p dominoes_svg
+        ls -l dominoes_svg
         python3 dominoes_svg.py
+        ls -l dominoes_svg
         git diff main
         git add dominoes_svg/domino_*.svg
         git diff main
