@@ -59,7 +59,7 @@ def svg_domino(svg: Drawing, domino: tuple[int, int], width_in_px: int = 200) ->
         svg_die(svg, die, pip_count, width_in_px)
 
 
-def dominoes_svg(width_in_px=200):
+def dominoes_svg(width_in_px=200) -> None:
     """
     Create SVG files for all 28 dominoes and save them in the `dominoes_svg` directory.
     """
