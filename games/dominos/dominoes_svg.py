@@ -4,7 +4,7 @@
 Create SVG files for all 28 dominoes and save them in the `dominoes_svg` directory.
 
 The SVG files are named `domino_i_j.svg` where `i` and `j` are the two numbers on the
-domino.  Images are 200x400 pixels with the pips (dots) being 5.5% of the domino width.
+domino. Images are 200x400 pixels with the pips (dots) being 5.5% of the domino width.
 
 % python3 -m venv .venv
 % source .venv/bin/activate
