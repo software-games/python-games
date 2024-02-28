@@ -67,6 +67,7 @@ class DominoWorld:
         return all(thePlayer.dominos for thePlayer in self.mPlayers)
 
     def playATurn(self) -> None:
+        global gPassesInARow
         p = self.mWhoseTurnMinor % len(self.mPlayers)
         # print(f"playATurn: {self.mWhoseTurnMinor} {p}")
         print(f"{'=' * 10} NEW TURN {'=' * 10}")
