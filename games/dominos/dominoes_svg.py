@@ -38,17 +38,15 @@ def svg_die(svg: Drawing, die: int, pip_count: int, width_in_px: int = 200) -> N
     """
     assert die in (0, 1)
     assert 0 <= pip_count <= 6
-    # insert = (2, 2 + width_in_px * die)
-    # size = (width_in_px, width_in_px)
-    # svg.add(svg.rect(insert=insert, size=size, fill="white", stroke="blue"))
-    # Now draw each of the pips...
+    pip_width = width_in_px * 0.055
+    # Draw each of the pips...
     for x, y in pip_locations[pip_count]:
         center = (
             2 + pip_offsets[x] * width_in_px,
             2 + width_in_px * die + pip_offsets[y] * width_in_px,
         )
         # pip radius is 5.5% of the width so 11 pixels on a 200px wide domino
-        svg.add(svg.circle(center=center, r=width_in_px * 0.055, fill="blue"))
+        svg.add(svg.circle(center=center, r=pip_width, fill="blue"))
 
 
 def svg_domino(svg: Drawing, domino: tuple[int, int], width_in_px: int = 200) -> None:
@@ -60,8 +58,9 @@ def svg_domino(svg: Drawing, domino: tuple[int, int], width_in_px: int = 200) ->
     """
     size = (width_in_px, width_in_px * 2)
     svg.add(svg.rect(insert=(2, 2), size=size, fill="white", stroke="blue"))
-    x1 = 2 + pip_offsets[0] * width_in_px - 5  # Left of the left-most pip
-    x2 = 2 + pip_offsets[2] * width_in_px + 5  # Right of the right-most pip
+    pip_width = width_in_px * 0.055
+    x1 = 2 + pip_offsets[0] * width_in_px - pip_width  # Left of the left-most pip
+    x2 = 2 + pip_offsets[2] * width_in_px + pip_width  # Right of the right-most pip
     svg.add(svg.line(start=(x1, width_in_px), end=(x2, width_in_px), stroke="blue"))
     for die, pip_count in enumerate(domino):
         svg_die(svg, die, pip_count, width_in_px)
