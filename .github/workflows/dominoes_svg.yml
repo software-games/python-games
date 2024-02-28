@@ -13,7 +13,7 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - run: pip install --user svgwrite
-    - run: npm install prettier @prettier/plugin-xml
+    - run: npm install --global prettier @prettier/plugin-xml
     - run: |
         # git checkout -b "dominoes_svg_$(date +'%Y_%m_%d_%H_%M')"
         cd games/dominos
