@@ -3,16 +3,13 @@
 # Uses: https://pypi.org/project/svgwrite
 name: dominoes_svg
 on:
-  push:
-    branches: [main]
-  pull_request:
-    branches: [main]
+  workflow_dispatch
 jobs:
   dominoes_svg:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
-    - run: pip install --user svgwrite xmlformatter
+    - run: pip install --user svgwrite
     - run: |
         # git checkout -b "dominoes_svg_$(date +'%Y_%m_%d_%H_%M')"
         cd games/dominos
@@ -20,4 +17,4 @@ jobs:
         python3 dominoes_svg.py
     - uses: peter-evans/create-pull-request@v6
       with:
-        commit-message: Recreate the Dominos Scalable Vector Graphics (SVG) files
+        title: Recreate the Dominos Scalable Vector Graphics (SVG) files
