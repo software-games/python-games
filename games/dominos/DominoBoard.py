@@ -5,10 +5,11 @@
 # from askNumberFromOneTo import askNumberFromOneTo
 # import tkinter as tk
 # from PlayedDomino import printPlayedDominos
-from tkDomino import tkDominoBoard
+# from tkDomino import tkDominoBoard
 
 
-class DominoBoard(tkDominoBoard):
+# class DominoBoard(tkDominoBoard):
+class DominoBoard:
     def __init__(self, inMaxDie=6):
         print(1, self.__class__)
         # print(2, self.super())
