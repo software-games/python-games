@@ -1,6 +1,6 @@
 # This Action uses minimal steps to run in ~5 seconds to rapidly:
 # Build Scalable Vector Graphics (SVG) files of a set of dominoes plus a blank domino.
-# Uses: https://pypi.org/project/svgwrite
+# Uses: https://pypi.org/project/svgwrite and https://github.com/prettier/plugin-xml
 name: dominoes_svg
 on:
   push:
@@ -12,8 +12,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
-    - run: npm install --save-dev prettier @prettier/plugin-xml
     - run: pip install --user svgwrite
+    - run: npm install prettier @prettier/plugin-xml
     - run: |
         # git checkout -b "dominoes_svg_$(date +'%Y_%m_%d_%H_%M')"
         cd games/dominos
