@@ -14,7 +14,7 @@ jobs:
     - uses: actions/checkout@v4
     - uses: actions/setup-node@v4
     - run: pip install --user svgwrite
-    - run: npm install --same-dev prettier @prettier/plugin-xml
+    # - run: npm install --same-dev prettier @prettier/plugin-xml
     - run: |
         # git checkout -b "dominoes_svg_$(date +'%Y_%m_%d_%H_%M')"
         cd games/dominos
@@ -23,7 +23,7 @@ jobs:
         python3 dominoes_svg.py
         ls -l dominoes_svg
         # ./node_modules/.bin/prettier --plugin=@prettier/plugin-xml --write dominoes_svg/domino_*.svg
-        prettier --plugin=@prettier/plugin-xml --write dominoes_svg/domino_*.svg
+        npx prettier --plugin=@prettier/plugin-xml --write dominoes_svg/domino_*.svg
     - uses: peter-evans/create-pull-request@v6
       with:
         commit-message: Recreate the Dominos Scalable Vector Graphics (SVG) files
