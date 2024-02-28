@@ -24,7 +24,8 @@ jobs:
         ls -l dominoes_svg
         # ./node_modules/.bin/prettier --plugin=@prettier/plugin-xml --write dominoes_svg/domino_*.svg
         # npx prettier --plugin=@prettier/plugin-xml --write dominoes_svg/domino_*.svg
-        npx --package=@prettier/plugin-xml prettier --plugin=@prettier/plugin-xml --write dominoes_svg/domino_*.svg
+        # npx --package=@prettier/plugin-xml prettier --plugin=@prettier/plugin-xml --write dominoes_svg/domino_*.svg
+        npx prettier --write dominoes_svg/domino_*.svg
     - uses: peter-evans/create-pull-request@v6
       with:
         commit-message: Recreate the Dominos Scalable Vector Graphics (SVG) files
