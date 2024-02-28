@@ -1,0 +1,18 @@
+# This Action uses minimal steps to run in ~5 seconds to rapidly:
+# Build Scalable Vector Graphics (SVG) files of a set of dominoes plus a blank domino.
+# Uses: https://pypi.org/project/svgwrite
+name: dominoes_svg
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+jobs:
+  dominoes_svg:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - run: pip install --user svgwrite
+    - run: cd games/dominos
+    - run: mkdir -p dominoes_svg 
+    - run: python3 dominoes_svg.py
