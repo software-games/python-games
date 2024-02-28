@@ -38,9 +38,9 @@ def svg_die(svg: Drawing, die: int, pip_count: int, width_in_px: int = 200) -> N
     """
     assert die in (0, 1)
     assert 0 <= pip_count <= 6
-    insert = (2, 2 + width_in_px * die)
-    size = (width_in_px, width_in_px)
-    svg.add(svg.rect(insert=insert, size=size, fill="white", stroke="blue"))
+    # insert = (2, 2 + width_in_px * die)
+    # size = (width_in_px, width_in_px)
+    # svg.add(svg.rect(insert=insert, size=size, fill="white", stroke="blue"))
     # Now draw each of the pips...
     for x, y in pip_locations[pip_count]:
         center = (
@@ -53,8 +53,16 @@ def svg_die(svg: Drawing, die: int, pip_count: int, width_in_px: int = 200) -> N
 
 def svg_domino(svg: Drawing, domino: tuple[int, int], width_in_px: int = 200) -> None:
     """
-    Draw a domino on the SVG canvas by calling svg_die() for each half of the domino.
+    Draw a domino on the SVG canvas by:
+    1. Draw the bounding rect.
+    2. Draw the dividing line.
+    3. Call svg_die() to draw each half of the domino.
     """
+    size = (width_in_px, width_in_px * 2)
+    svg.add(svg.rect(insert=(2, 2), size=size, fill="white", stroke="blue"))
+    x1 = 2 + pip_offsets[0] * w - 5  # Left of the left-most pip
+    x2 = 2 + pip_offsets[2] * w + 5  # Right of the right-most pip
+    svg.add(svg.line(x1=x1, y1=width_in_px, x2=x2, y2=width_in_px, stroke="blue"))
     for die, pip_count in enumerate(domino):
         svg_die(svg, die, pip_count, width_in_px)
 
