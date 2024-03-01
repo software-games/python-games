@@ -30,7 +30,7 @@ from random import choice
 
 import pytest
 
-from DominoBoard import buildCanvas
+from games.dominoes.DominoBoard import buildCanvas
 # print(argv)
 
 cLeft, cRight, cUp, cDown = range(4)  # TODO: Enum
