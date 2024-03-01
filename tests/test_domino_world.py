@@ -7,7 +7,7 @@ import pytest
 # from sys import argv
 # from askNumberFromOneTo import askNumberFromOneTo
 # from PlayedDomino import PlayedDomino
-from games.dominoes.DominoWorld import initDominos, pointsRounded
+from .games.dominoes.DominoWorld import initDominos, pointsRounded
 
 gPassesInARow = 0
 

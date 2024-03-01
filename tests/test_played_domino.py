@@ -30,7 +30,7 @@ from random import choice
 
 import pytest
 
-from games.dominoes.DominoBoard import buildCanvas
+from .games.dominoes.DominoBoard import buildCanvas
 
 # print(argv)
 
