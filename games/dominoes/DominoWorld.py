@@ -4,12 +4,12 @@ from random import shuffle
 
 import pytest
 
-from DominoBoard import DominoBoard
+from .DominoBoard import DominoBoard
 
 # from sys import argv
 # from askNumberFromOneTo import askNumberFromOneTo
 # from PlayedDomino import PlayedDomino
-from DominoPlayer import DominoPlayer
+from .DominoPlayer import DominoPlayer
 
 gPassesInARow = 0
 
