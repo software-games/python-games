@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 
-from .games.dominoes.DominoBoard import DominoBoard
-from .games.dominoes.DominoPlayer import DominoPlayer, DominoRunMove
-from .games.dominoes.PlayedDomino import PlayedDomino
+from games.dominoes.DominoBoard import DominoBoard
+from games.dominoes.DominoPlayer import DominoPlayer, DominoRunMove
+from games.dominoes.PlayedDomino import PlayedDomino
 
 
 class TestDominoRunMove:
