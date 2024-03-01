@@ -2,7 +2,7 @@ import io
 
 import pytest
 
-from games.dominoes.askNumberFromOneTo import askNumberFromOneTo
+from games.dominoes.ask_number_from_one_to import askNumberFromOneTo
 
 
 @pytest.mark.parametrize(

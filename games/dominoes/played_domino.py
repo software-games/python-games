@@ -19,6 +19,7 @@ doubles.
           -
           5
 """
+
 from __future__ import annotations
 
 # from random import choice, shuffle
@@ -32,7 +33,7 @@ from random import choice
 
 import pytest
 
-from games.dominoes.DominoBoard import buildCanvas
+from games.dominoes.domino_board import buildCanvas
 # print(argv)
 
 cLeft, cRight, cUp, cDown = range(4)  # TODO: Enum

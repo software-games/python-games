@@ -6,12 +6,8 @@ from random import shuffle
 
 import pytest
 
-from games.dominoes.DominoBoard import DominoBoard
-
-# from sys import argv
-# from askNumberFromOneTo import askNumberFromOneTo
-# from PlayedDomino import PlayedDomino
-from games.dominoes.DominoPlayer import DominoPlayer
+from games.dominoes.domino_player import DominoPlayer
+from games.dominoes.domino_board import DominoBoard
 
 gPassesInARow = 0
 

@@ -1,30 +1,9 @@
-#!/usr/bin/env python3
-"""
-Before a domino played, it has a very simple data structure:
-1. die_values: list[int] = [3, 6]
-2. is_face_down: bool = False
-3. images: tuple[image_svg, image_svg] = (face_up_image, face_down_image)
-
-Once it is played, it must be able to fit into a complex configuration in the play_area
-with the domino, location, neighbors, order ([3, 6] or [6, 3]), orentation (horizontal
-or vertical), points for exposed ends, and the player who played it.  This information
-enables a playedDomino to be drawn on the canvas like the one below with Dominoes in
-straight lines where dominoes share the same number or at right angles where there are
-doubles.
-
-          2          4     5
-[0,1][1,2]-[2,3][3,4]-[4,5]-
-          2          4     5
-          2
-          -
-          5
-"""
 import tkinter as tk
 
 import pytest
 
-from games.dominoes.DominoBoard import buildCanvas
-from games.dominoes.PlayedDomino import (
+from games.dominoes.domino_board import buildCanvas
+from games.dominoes.played_domino import (
     lrNoDoublesOffset,
     lrMeDoubleOffset,
     lrOtherDoubleOffset,
@@ -398,10 +377,3 @@ class TestPlayedDomino:
         assert canvas[0][0] == "3"
         assert canvas[1][0] == "-"
         assert canvas[2][0] == "3"
-
-
-if __name__ == "__main__":
-    # from DominoTest import main
-    from DominoWorld import main
-
-    main()

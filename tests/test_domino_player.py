@@ -1,8 +1,6 @@
-#!/usr/bin/env python3
-
-from games.dominoes.DominoBoard import DominoBoard
-from games.dominoes.DominoPlayer import DominoPlayer, DominoRunMove
-from games.dominoes.PlayedDomino import PlayedDomino
+from games.dominoes.domino_board import DominoBoard
+from games.dominoes.domino_player import DominoPlayer, DominoRunMove
+from games.dominoes.played_domino import PlayedDomino
 
 
 class TestDominoRunMove:
@@ -176,9 +174,3 @@ class TestDominoPlayer:
         player = DominoPlayer("Player 1", board)
         player.dominos = [[0, 0], [0, 1], [1, 1]]
         # assert player.playAMove(DominoRunMove(PlayedDomino(1, [0, 0]), [0, 1])) == False  # TODO: Fix me
-
-
-if __name__ == "__main__":
-    from DominoWorld import main
-
-    main()

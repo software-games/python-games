@@ -14,6 +14,7 @@ domino. Images are 200x400 pixels with the pips (dots) being 5.5% of the domino 
 % python3 ./dominoes_svg.py
 % open dominoes_svg/*
 """
+
 import svgwrite
 from svgwrite.drawing import Drawing
 
