@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 
-from .askNumberFromOneTo import askNumberFromOneTo
-from .DominoBoard import DominoBoard
-from .PlayedDomino import PlayedDomino
+from askNumberFromOneTo import askNumberFromOneTo
+from DominoBoard import DominoBoard
+from PlayedDomino import PlayedDomino
 
 
 class DominoRunMove:
