@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 
+from __future__ import annotations
+
 from games.dominoes.askNumberFromOneTo import askNumberFromOneTo
 from games.dominoes.DominoBoard import DominoBoard
 from games.dominoes.PlayedDomino import PlayedDomino

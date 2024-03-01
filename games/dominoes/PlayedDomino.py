@@ -19,6 +19,8 @@ doubles.
           -
           5
 """
+from __future__ import annotations
+
 # from random import choice, shuffle
 import tkinter as tk
 
