@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 
+from __future__ import annotations
+
 # from random import shuffle
 # from sys import argv
 # from askNumberFromOneTo import askNumberFromOneTo
