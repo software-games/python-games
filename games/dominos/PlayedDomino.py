@@ -17,7 +17,11 @@ import tkinter as tk
 # udOtherDoubleOffset
 from random import choice
 
+import pytest
+
 # print(argv)
+
+cLeft, cRight, cUp, cDown = range(4)  # TODO: Enum
 
 
 def lrNoDoublesOffset(inDirection) -> list[int]:
@@ -28,12 +32,38 @@ def lrNoDoublesOffset(inDirection) -> list[int]:
     return [[-5, 0], [5, 0], [0, 0], [0, 0]][inDirection]
 
 
+@pytest.mark.parametrize(
+    "inDirection, expected",
+    [
+        (cLeft, [-5, 0]),
+        (cRight, [5, 0]),
+        (cUp, [0, 0]),
+        (cDown, [0, 0]),
+    ],
+)
+def test_lrNoDoublesOffset(inDirection, expected):
+    assert lrNoDoublesOffset(inDirection) == expected
+
+
 def lrMeDoubleOffset(inDirection):
     """
     TODO: Return a tuple of two integers instead of a list.
     """
     # print('lrMeDoubleOffset({})'.format(inDirection), end='')
     return [[-5, 0], [5, 0], [2, -3], [2, 1]][inDirection]
+
+
+@pytest.mark.parametrize(
+    "inDirection, expected",
+    [
+        (cLeft, [-5, 0]),
+        (cRight, [5, 0]),
+        (cUp, [2, -3]),
+        (cDown, [2, 1]),
+    ],
+)
+def test_lrMeDoubleOffset(inDirection, expected):
+    assert lrMeDoubleOffset(inDirection) == expected
 
 
 def lrOtherDoubleOffset(inDirection):
@@ -44,12 +74,51 @@ def lrOtherDoubleOffset(inDirection):
     return [[-1, -1], [5, -1], [0, 0], [0, 0]][inDirection]
 
 
+@pytest.mark.parametrize(
+    "inDirection, expected",
+    [
+        (cLeft, [-1, -1]),
+        (cRight, [5, -1]),
+        (cUp, [0, 0]),
+        (cDown, [0, 0]),
+    ],
+)
+def test_lrOtherDoubleOffset(inDirection, expected):
+    assert lrOtherDoubleOffset(inDirection) == expected
+
+
+@pytest.mark.parametrize(
+    "inDirection, expected",
+    [
+        (cLeft, [0, 0]),
+        (cRight, [0, 0]),
+        (cUp, [0, -3]),
+        (cDown, [0, 3]),
+    ],
+)
+def test_udNoDoublesOffset(inDirection, expected):
+    assert udNoDoublesOffset(inDirection) == expected
+
+
 def udNoDoublesOffset(inDirection):
     """
     TODO: Return a tuple of two integers instead of a list.
     """
     # print('udNoDoublesOffset({})'.format(inDirection), end='')
     return [[0, 0], [0, 0], [0, -3], [0, 3]][inDirection]
+
+
+@pytest.mark.parametrize(
+    "inDirection, expected",
+    [
+        (cLeft, [-5, 1]),
+        (cRight, [1, 1]),
+        (cUp, [0, -3]),
+        (cDown, [0, 3]),
+    ],
+)
+def test_udMeDoubleOffset(inDirection, expected):
+    assert udMeDoubleOffset(inDirection) == expected
 
 
 def udMeDoubleOffset(inDirection):
@@ -60,6 +129,19 @@ def udMeDoubleOffset(inDirection):
     return [[-5, +1], [1, 1], [0, -3], [0, 3]][inDirection]
 
 
+@pytest.mark.parametrize(
+    "inDirection, expected",
+    [
+        (cLeft, [0, 0]),
+        (cRight, [0, 0]),
+        (cUp, [-2, -1]),
+        (cDown, [-2, 3]),
+    ],
+)
+def test_udOtherDoubleOffset(inDirection, expected):
+    assert udOtherDoubleOffset(inDirection) == expected
+
+
 def udOtherDoubleOffset(inDirection):
     """
     TODO: Return a tuple of two integers instead of a list.
@@ -68,10 +150,20 @@ def udOtherDoubleOffset(inDirection):
     return [[0, 0], [0, 0], [-2, -1], [-2, 3]][inDirection]
 
 
-cLeft, cRight, cUp, cDown = range(4)  # TODO: Enum
+@pytest.mark.parametrize(
+    "inDirection, expected",
+    [
+        (cLeft, cRight),
+        (cRight, cLeft),
+        (cUp, cDown),
+        (cDown, cUp),
+    ],
+)
+def test_oppositeDirection(inDirection, expected):
+    assert oppositeDirection(inDirection) == expected
 
 
-def oppositeDirection(inDirection):
+def oppositeDirection(inDirection) -> int:
     """
     TODO: Dict lookup instead of if-elif-else.
     """
@@ -93,8 +185,34 @@ def rightAngles(inDirection) -> list[int]:
     return [cUp, cDown] if inDirection in {cLeft, cRight} else [cLeft, cRight]
 
 
+@pytest.mark.parametrize(
+    "inDirection, expected",
+    [
+        (cLeft, [cUp, cDown]),
+        (cRight, [cUp, cDown]),
+        (cUp, [cLeft, cRight]),
+        (cDown, [cLeft, cRight]),
+    ],
+)
+def test_rightAngles(inDirection, expected):
+    assert rightAngles(inDirection) == expected
+
+
 def whichDie(inDirection) -> bool:
     return inDirection in {cRight, cDown}
+
+
+@pytest.mark.parametrize(
+    "inDirection, expected",
+    [
+        (cLeft, False),
+        (cRight, True),
+        (cUp, False),
+        (cDown, True),
+    ],
+)
+def test_whichDie(inDirection, expected):
+    assert whichDie(inDirection) == expected
 
 
 class PlayedDomino:
