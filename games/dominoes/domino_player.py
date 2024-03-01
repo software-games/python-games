@@ -2,9 +2,9 @@
 
 from __future__ import annotations
 
-from games.dominoes.askNumberFromOneTo import askNumberFromOneTo
-from games.dominoes.DominoBoard import DominoBoard
-from games.dominoes.PlayedDomino import PlayedDomino
+from games.dominoes.ask_number_from_one_to import askNumberFromOneTo
+from games.dominoes.domino_board import DominoBoard
+from games.dominoes.played_domino import PlayedDomino
 
 
 class DominoRunMove:

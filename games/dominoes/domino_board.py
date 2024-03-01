@@ -141,6 +141,6 @@ def printCanvas(inCanvas):
 
 
 if __name__ == "__main__":
-    from DominoWorld import main
+    from games.domino.domino_world import main
 
     main()

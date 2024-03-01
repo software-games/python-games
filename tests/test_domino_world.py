@@ -1,15 +1,6 @@
-#!/usr/bin/env python3
-
-
 import pytest
 
-
-# from sys import argv
-# from askNumberFromOneTo import askNumberFromOneTo
-# from PlayedDomino import PlayedDomino
-from games.dominoes.DominoWorld import initDominos, pointsRounded
-
-gPassesInARow = 0
+from games.dominoes.domino_world import initDominos, pointsRounded
 
 
 def test_initDominos():
