@@ -120,8 +120,19 @@ class DominoBoard:
         print(f"Playable: {self.playableNumbers()}, Value: {self.value}")
 
 
-def buildCanvas(inDimensions):
+def buildCanvas(inDimensions: list[int]) -> list[list[str]]:
     return [[" "] * (inDimensions[0] + 5) for _ in range(inDimensions[1] + 5)]
+
+
+def test_buildCanvas():
+    assert buildCanvas([1, 1]) == [
+        [" ", " ", " ", " ", " ", " "],
+        [" ", " ", " ", " ", " ", " "],
+        [" ", " ", " ", " ", " ", " "],
+        [" ", " ", " ", " ", " ", " "],
+        [" ", " ", " ", " ", " ", " "],
+        [" ", " ", " ", " ", " ", " "],
+    ]
 
 
 def printCanvas(inCanvas):
