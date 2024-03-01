@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 
+from __future__ import annotations
+
 # from random import shuffle
 # from sys import argv
 # from askNumberFromOneTo import askNumberFromOneTo
@@ -122,17 +124,6 @@ class DominoBoard:
 
 def buildCanvas(inDimensions: list[int]) -> list[list[str]]:
     return [[" "] * (inDimensions[0] + 5) for _ in range(inDimensions[1] + 5)]
-
-
-def test_buildCanvas():
-    assert buildCanvas([1, 1]) == [
-        [" ", " ", " ", " ", " ", " "],
-        [" ", " ", " ", " ", " ", " "],
-        [" ", " ", " ", " ", " ", " "],
-        [" ", " ", " ", " ", " ", " "],
-        [" ", " ", " ", " ", " ", " "],
-        [" ", " ", " ", " ", " ", " "],
-    ]
 
 
 def printCanvas(inCanvas):

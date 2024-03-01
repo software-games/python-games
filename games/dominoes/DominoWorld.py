@@ -1,15 +1,17 @@
 #!/usr/bin/env python3
 
+from __future__ import annotations
+
 from random import shuffle
 
 import pytest
 
-from DominoBoard import DominoBoard
+from games.dominoes.DominoBoard import DominoBoard
 
 # from sys import argv
 # from askNumberFromOneTo import askNumberFromOneTo
 # from PlayedDomino import PlayedDomino
-from DominoPlayer import DominoPlayer
+from games.dominoes.DominoPlayer import DominoPlayer
 
 gPassesInARow = 0
 
