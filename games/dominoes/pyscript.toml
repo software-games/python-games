@@ -1,0 +1,14 @@
+name = "Dominoes"
+# packages = ["svgwrite"]
+packages = ["pytest"]
+[files]
+# "https://raw.githubusercontent.com/software-games/python-games/main/games/dominoes/ask_number_from_one_to.py" = ""
+# "https://github.com/software-games/python-games/blob/main/games/dominos/dominoes_svg/domino_0_0.svg" = ""
+# "https://github.com/software-games/python-games/blob/main/games/dominos/dominoes_svg/domino_0_1.svg" = "dominoes_svg/domino_0_1.svg"
+# "https://raw.githubusercontent.com/software-games/python-games/main/games/dominoes/domino_world.py" = ""
+"https://raw.githubusercontent.com/software-games/python-games/main/games/dominoes/domino_board.py" = ""
+"./dominoes/ask_number_from_one_to.py" = "games/dominoes/ask_number_from_one_to.py"
+"./dominoes/domino_board.py" = "games/dominoes/domino_board.py"
+"./dominoes/domino_world.py" = "games/dominoes/domino_world.py"
+"./dominoes/domino_player.py" = "games/dominoes/domino_player.py"
+"./dominoes/played_domino.py" = "games/dominoes/played_domino.py"
