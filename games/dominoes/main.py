@@ -13,10 +13,10 @@ Issues:
 """
 # import time
 from pyweb import pydom
-from pyscript import display, document, when, window
+from pyscript import display, when   # document, window
 # from js import DOMParser
-from pyodide.http import open_url
-from pyodide.ffi import JsProxy
+# from pyodide.http import open_url
+# from pyodide.ffi import JsProxy
 display("Imports...")
 print("Imports...")
 
