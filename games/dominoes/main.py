@@ -11,6 +11,7 @@ Issues:
     * Place PlayedDominos in the center of the PlayArea
     * Scale PlayedDominosto fit PlayArea
 """
+display("Startup...")
 # import time
 from pyweb import pydom
 from pyscript import display, when   # document, window
