@@ -1,3 +1,3 @@
 from pyscript import display
 
-display("Imports...")
+display("Imports...", target="body")
