@@ -1,22 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Claussoft Dominoes</title>
-    <style>
-        #remote_players_hand, #boneyard, #pegboard, #local_players_hand {
-            text-align: center
-        }
-        <!--
-        #ZZZplay_area {
-            border: 1px solid blue;
-            display: flex;
-            justify-content: space-evenly;
-        }
-        #play_area {
-            img {"flex: 2";}
-        }
-        -->
-    </style>
+    <title>Software Games -- Python Games</title>
 
     <!-- Recommended meta tags -->
     <meta charset="UTF-8">
@@ -29,51 +14,6 @@
     <script type="module" src="https://pyscript.net/releases/2024.2.1/core.js"></script>
   </head>
   <body>
-    <script id="console" type="py" src="./main.py" config="./pyscript.toml" terminal worker></script>
-
-    <div id="remote_players_hand" width="850" height="102">Remote player's hand</div>
-    <!-- <main style="display: flex;justify-content: space-evenly;"> -->
-    <main>
-      <div id="boneyard" width="100" height="700">Boneyard
-        <img id="domino_0_0" src="dominoes_svg/domino_0_0.svg" width=50 height=100 draggable=true>
-        <img id="domino_0_1" src="dominoes_svg/domino_0_1.svg" width=50 height=100 draggable=true>
-        <img id="domino_0_2" src="dominoes_svg/domino_0_2.svg" width=50 height=100 draggable=true>
-        <img id="domino_0_3" src="dominoes_svg/domino_0_3.svg" width=50 height=100 draggable=true>
-        <img id="domino_0_4" src="dominoes_svg/domino_0_4.svg" width=50 height=100 draggable=true>
-        <img id="domino_0_5" src="dominoes_svg/domino_0_5.svg" width=50 height=100 draggable=true>
-        <img id="domino_0_6" src="dominoes_svg/domino_0_6.svg" width=50 height=100 draggable=true>
-        <img id="domino_1_1" src="dominoes_svg/domino_1_1.svg" width=50 height=100 draggable=true>
-        <img id="domino_1_2" src="dominoes_svg/domino_1_2.svg" width=50 height=100 draggable=true>
-        <img id="domino_1_3" src="dominoes_svg/domino_1_3.svg" width=50 height=100 draggable=true>
-        <img id="domino_1_4" src="dominoes_svg/domino_1_4.svg" width=50 height=100 draggable=true>
-        <img id="domino_1_5" src="dominoes_svg/domino_1_5.svg" width=50 height=100 draggable=true>
-        <img id="domino_1_6" src="dominoes_svg/domino_1_6.svg" width=50 height=100 draggable=true>
-        <img id="domino_2_2" src="dominoes_svg/domino_2_2.svg" width=50 height=100 draggable=true>
-        <img id="domino_2_3" src="dominoes_svg/domino_2_3.svg" width=50 height=100 draggable=true>
-        <img id="domino_2_4" src="dominoes_svg/domino_2_4.svg" width=50 height=100 draggable=true>
-        <img id="domino_2_5" src="dominoes_svg/domino_2_5.svg" width=50 height=100 draggable=true>
-        <img id="domino_2_6" src="dominoes_svg/domino_2_6.svg" width=50 height=100 draggable=true>
-        <img id="domino_3_3" src="dominoes_svg/domino_3_3.svg" width=50 height=100 draggable=true>
-        <img id="domino_3_4" src="dominoes_svg/domino_3_4.svg" width=50 height=100 draggable=true>
-        <img id="domino_3_5" src="dominoes_svg/domino_3_5.svg" width=50 height=100 draggable=true>
-        <img id="domino_3_6" src="dominoes_svg/domino_3_6.svg" width=50 height=100 draggable=true>
-        <img id="domino_4_4" src="dominoes_svg/domino_4_4.svg" width=50 height=100 draggable=true>
-        <img id="domino_4_5" src="dominoes_svg/domino_4_5.svg" width=50 height=100 draggable=true>
-        <img id="domino_4_6" src="dominoes_svg/domino_4_6.svg" width=50 height=100 draggable=true>
-        <img id="domino_5_5" src="dominoes_svg/domino_5_5.svg" width=50 height=100 draggable=true>
-        <img id="domino_5_6" src="dominoes_svg/domino_5_6.svg" width=50 height=100 draggable=true>
-        <img id="domino_6_6" src="dominoes_svg/domino_6_6.svg" width=50 height=100 draggable=true>
-      </div>
-      <div id="play_area" width="850" height="700" border="2px solid blue">Play Area</div>
-      <div id="pegboard" width="100" height="700">Pegboard</div>
-    </main>
-    <div id="local_players_hand" width="850" height="102" background-color="blue">Local player's hand</div>
-
-    <!--
-    <div id="terminal">
-        <script id="console" type="py" terminal></script>
-    </div>
-    -->
-
+    <a href="./games/dominoes">Claussoft Dominoes</a>
   </body>
 </html>
