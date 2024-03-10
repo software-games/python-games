@@ -11,7 +11,6 @@ Issues:
     * Place PlayedDominos in the center of the PlayArea
     * Scale PlayedDominosto fit PlayArea
 """
-display("Startup...")
 # import time
 from pyweb import pydom
 from pyscript import display, when   # document, window
@@ -21,7 +20,7 @@ from pyscript import display, when   # document, window
 display("Imports...")
 print("Imports...")
 
-
+'''
 # import dominoes_svg
 # import dominoes
 # from . import dominoes
@@ -257,3 +256,4 @@ def drag_end(event):
 print(0)
 _domino = Domino()
 print(1)
+'''
