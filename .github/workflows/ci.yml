@@ -6,7 +6,7 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - run: pip install --user codespell[toml] ruff
-    - run: codespell || true  # --ignore-words-list="" --skip="*.css,*.js,*.lock,*.po"
+    - run: codespell
     - run: ruff check --output-format=github
     - run: ruff format
   pytest:
