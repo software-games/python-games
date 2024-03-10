@@ -1,3 +1,3 @@
 from pyscript import display
 
-display("Imports...", target="body")
+display("Imports...", target="status")
