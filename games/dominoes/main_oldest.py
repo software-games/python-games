@@ -13,8 +13,8 @@ Issues:
 """
 
 # import time
-from pyweb import pydom
-from pyscript import display, when  # document, window
+# from pyweb import pydom
+from pyscript import display  # document, when, window
 
 # from js import DOMParser
 # from pyodide.http import open_url
