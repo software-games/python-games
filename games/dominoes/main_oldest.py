@@ -11,9 +11,11 @@ Issues:
     * Place PlayedDominos in the center of the PlayArea
     * Scale PlayedDominosto fit PlayArea
 """
+
 # import time
 from pyweb import pydom
-from pyscript import display, when   # document, window
+from pyscript import display, when  # document, window
+
 # from js import DOMParser
 # from pyodide.http import open_url
 # from pyodide.ffi import JsProxy
@@ -45,7 +47,7 @@ def to_html_element(pydom_element):
     Convert pyweb.pydom["#name"] -> pyscript.document.getElementById("name")
     Examples:
     Convert a pyweb.pydom.Element -> pydom.HTMLImageElement,
-    Convert a pyweb.pydom.ElementCollection --> 
+    Convert a pyweb.pydom.ElementCollection -->
     """
     return pydom_element[0]._js
 
@@ -54,11 +56,11 @@ def get_pydom_domino(domino: list[int]) -> pydom.Element:
     domino = sorted(domino)
     assert len(domino) == 2 and domino[0] >= 0 and domino[1] <= 6, str(domino)
     return pydom["#domino_{}_{}".format(*domino)]
-    
+
 
 def get_domino_image(domino: list[int]):  # -> pydom.HTMLImageElement:
     return to_html_element(get_pydom_domino(domino))
-    
+
 
 class Domino:
     domino_size = (50, 100)  # Allows us to scale up/down all dominos to fit the canvas
@@ -84,8 +86,8 @@ class Domino:
         self.three_four = window.Image.new()
         self.three_four.src = 'dominoes_svg/domino_3_4.svg'
         """
-        
-   
+
+
         """
         self.target: pydom.Element = pydom[f"#{target}" if isinstance(target, str) else "body"][0]
         domino_5_6: str = open_url(self.url).read()
@@ -93,7 +95,7 @@ class Domino:
         self.node: JsProxy = doc.documentElement
         self.target.append(self.node)
         """
-        
+
         name_bgcolor = {
             "remote_players_hand": "pink",
             "boneyard": "lightgrey",
@@ -115,7 +117,7 @@ class Domino:
         four_six_alt = to_html_element(four_six)
         local_players_hand_alt = to_html_element(local_players_hand)
         remote_players_hand_alt = to_html_element(remote_players_hand)
-        
+
         local_players_hand_alt.appendChild(four_six[0]._js)
         remote_players_hand_alt.appendChild(get_domino_image((6, 3)))
         # boneyard_js = to_html_element(self.areas["boneyard"])
@@ -174,7 +176,7 @@ class Domino:
         # domino66 = pydom["#domino_6_6"][0]  # document.getElementById("domino_6_6")
         # domino66.style["background-color"] = "yellow"
         # print(f"{domino66 = }")
-        
+
         # print(f"{domino66.getAttribute('transform') = }")
         # domino66.setAttribute("transform", domino66.getAttribute("transform") or "" + " rotate(90)")
         # print(f"{domino66.getAttribute('transform') = }")
@@ -243,7 +245,7 @@ def drag_end(event):
     # _domino.draw(event)
     print(f"Drag ended: {event.target.id = }: {event.x=}, {event.y=}")
     print(f"Drag ended: {event.target = }")
-    
+
     event.target.x = event.clientX
     event.target.y = event.clientY
     print(f"{event.target.id = }")
