@@ -29,9 +29,9 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - run: npx mini-coi .
       - name: Checkout
         uses: actions/checkout@v4
+      - run: npx mini-coi .
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Upload artifact
