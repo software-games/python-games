@@ -8,7 +8,7 @@ jobs:
   dominoes_svg:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v5
     - run: pip install --user svgwrite
     - run: |
         # git checkout -b "dominoes_svg_$(date +'%Y_%m_%d_%H_%M')"
