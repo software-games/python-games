@@ -15,6 +15,6 @@ jobs:
         cd games/dominos
         mkdir -p dominoes_svg
         python3 dominoes_svg.py
-    - uses: peter-evans/create-pull-request@v7
+    - uses: peter-evans/create-pull-request@v8
       with:
         title: Recreate the Dominos Scalable Vector Graphics (SVG) files
