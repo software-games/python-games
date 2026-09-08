@@ -6,8 +6,8 @@ from random import shuffle
 
 import pytest
 
-from games.dominoes.domino_player import DominoPlayer
 from games.dominoes.domino_board import DominoBoard
+from games.dominoes.domino_player import DominoPlayer
 
 gPassesInARow = 0
 
@@ -50,7 +50,7 @@ def test_initDominos():
 
 
 def pointsRounded(inValue, n=5) -> int:
-    return int(round((inValue + n // 2) // n))
+    return round((inValue + n // 2) // n)
 
 
 @pytest.mark.parametrize(
@@ -180,8 +180,7 @@ class DominoWorld:
     def highestScore(self) -> int:
         highScore = 0
         for p in self.mPlayers:
-            if p.points > highScore:
-                highScore = p.points
+            highScore = max(highScore, p.points)
         return highScore
 
     def checkForWinner(self) -> str:

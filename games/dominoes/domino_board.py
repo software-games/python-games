@@ -130,8 +130,7 @@ def printCanvas(inCanvas):
     theMax = 0
     for theLine in inCanvas:
         theLine = "".join(theLine).rstrip()
-        if len(theLine) > theMax:
-            theMax = len(theLine)
+        theMax = max(theMax, len(theLine))
     border = ("=" * 33)[:theMax]
     print(border)
     for theLine in inCanvas:
