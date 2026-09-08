@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 # from games.dominoes.domino_board import DominoBoard, buildCanvas, printCanvas
-
 from games.dominoes.domino_board import buildCanvas
 
 

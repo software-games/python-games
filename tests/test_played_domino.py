@@ -4,16 +4,16 @@ import pytest
 
 from games.dominoes.domino_board import buildCanvas
 from games.dominoes.played_domino import (
-    lrNoDoublesOffset,
+    PlayedDomino,
     lrMeDoubleOffset,
+    lrNoDoublesOffset,
     lrOtherDoubleOffset,
-    udNoDoublesOffset,
-    udMeDoubleOffset,
-    udOtherDoubleOffset,
     oppositeDirection,
     rightAngles,
+    udMeDoubleOffset,
+    udNoDoublesOffset,
+    udOtherDoubleOffset,
     whichDie,
-    PlayedDomino,
 )
 
 # print(argv)

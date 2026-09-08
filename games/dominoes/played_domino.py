@@ -34,6 +34,7 @@ from random import choice
 import pytest
 
 from games.dominoes.domino_board import buildCanvas
+
 # print(argv)
 
 cLeft, cRight, cUp, cDown = range(4)  # TODO: Enum
@@ -250,7 +251,7 @@ class PlayedDomino:
                 return lrOtherDoubleOffset(inDirection)
             else:
                 return lrNoDoublesOffset(inDirection)
-        else:  # noqa: PLR5501
+        else:
             if self.isDouble():
                 return udMeDoubleOffset(inDirection)
             elif inDomino.isDouble():
