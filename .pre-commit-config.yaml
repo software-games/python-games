@@ -18,7 +18,7 @@ repos:
     -   id: auto-walrus
 
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.16.6
+    rev: v0.17.3
     hooks:
       - id: ruff-check
       - id: ruff-format
@@ -32,7 +32,7 @@ repos:
           - tomli
 
   - repo: https://github.com/tox-dev/pyproject-fmt
-    rev: "v2.29.3"
+    rev: "v2.30.3"
     hooks:
       - id: pyproject-fmt
 
@@ -45,7 +45,7 @@ repos:
         pass_filenames: false
 
   - repo: https://github.com/abravalheri/validate-pyproject
-    rev: '0.26'
+    rev: 'v0.27'
     hooks:
       - id: validate-pyproject
 
